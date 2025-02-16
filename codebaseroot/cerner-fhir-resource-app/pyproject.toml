@@ -1,0 +1,128 @@
+[project]
+name = "Cerner FHIR Resource lambda"
+version = "1.0.0"
+authors = [
+  { name="Data Engineering", email="test@enginneeing.edu" },
+]
+description = ""
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = ""
+"Bug Tracker" = "https://test.atlassian.net/jira/software/c/projects/DE/boards/242"
+
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+
+[tool.pylint.main]
+source-roots=["src"]
+
+# Specify a score threshold under which the program will exit with error.
+fail-under = 9.75
+
+# Files or directories to be skipped. They should be base names, not paths.
+ignore = ["config"]
+
+# Files or directories matching the regular expression patterns are skipped. The
+# regex matches against base names, not paths. The default value ignores Emacs
+# file locks
+ignore-patterns = ["^\\.#"]
+
+# Use multiple processes to speed up Pylint. Specifying 0 will auto-detect the
+# number of processors available to use, and will cap the count on Windows to
+# avoid hangs. (default: 1)
+jobs = 0
+
+# Pickle collected data for later comparisons.
+persistent = true
+
+# Minimum Python version to use for version dependent checks. Will default to the
+# version used to run pylint.
+py-version = "3.11"
+
+[tool.pylint.basic]
+# Regular expression which should only match function or class names that do not
+# require a docstring.
+no-docstring-rgx = "^(?:test|mock)?_"
+
+[tool.pylint.design]
+# Maximum number of arguments for function / method. (default: 5)
+max-args = 10
+
+# Maximum number of attributes for a class (see R0902). (default: 7)
+max-attributes = 10
+
+# Maximum number of boolean expressions in an if statement (see R0916).
+max-bool-expr = 5
+
+# Maximum number of branch for function / method body.
+max-branches = 15
+
+# Maximum number of locals for function / method body.
+max-locals = 20
+
+# Maximum number of parents for a class (see R0901).
+max-parents = 10
+
+# Maximum number of public methods for a class (see R0904).
+max-public-methods = 20
+
+# Maximum number of return / yield for function / method body.
+max-returns = 10
+
+# Maximum number of statements in function / method body.
+max-statements = 50
+
+# Minimum number of public methods for a class (see R0903). (default: 2)
+min-public-methods = 0
+
+[tool.pylint.logging]
+# The type of string formatting that logging methods do. `old` means using %
+# formatting, `new` is for `{}` formatting.
+logging-format-style = "old"
+
+# Logging modules to check that the string format arguments are in logging
+# function parameter format.
+logging-modules = ["logging"]
+
+
+[tool.pylint.miscellaneous]
+# List of note tags to take in consideration, separated by a comma.
+notes = ["FIXME", "XXX", "TODO"]
+
+[tool.pylint.refactoring]
+# Maximum number of nested blocks for function / method body
+max-nested-blocks = 5
+
+# Complete name of functions that never returns. When checking for inconsistent-
+# return-statements if a never returning function is called then it will be
+# considered as an explicit return statement and no message will be printed.
+never-returning-functions = ["sys.exit", "argparse.parse_error"]
+
+[tool.pylint.reports]
+# Python expression which should return a score less than or equal to 10. You
+# have access to the variables 'fatal', 'error', 'warning', 'refactor',
+# 'convention', and 'info' which contain the number of messages in each category,
+# as well as 'statement' which is the total number of statements analyzed. This
+# score is used by the global evaluation report (RP0004).
+evaluation = "max(0, 0 if fatal else 10.0 - ((float(5 * error + warning + refactor + convention) / statement) * 10))"
+
+# Activate the evaluation score.
+score = true
+
+[mypy]
+mypy_path = "src/"
+
+[tool.coverage.report]
+exclude_also = [
+    "if __name__ == .__main__.:",
+]
+
+[tool.bandit]

@@ -1,0 +1,147 @@
+{
+    "resourceType": "Bundle",
+    "id": "f7f4b656-dba7-40e7-a774-170804070185",
+    "type": "searchset",
+    "link": [
+        {
+            "relation": "self",
+            "url": "https://fhir-ehr.mockcerner.com/r4/b748fd97-7e18-4e5e-80bc-257c0270573f/Observation?patient=123456&date=ge2019-09-01T00%3A00%3A00.000Z&date=le2024-11-01T00%3A00%3A00.000Z"
+        },
+        {
+            "relation": "next",
+            "url": "https://fhir-ehr.mockcerner.com/r4/b748fd97-7e18-4e5e-80bc-257c0270573f/Observation?patient=123456&date=ge2019-09-01T00%3A00%3A00.000Z&date=le2024-11-01T00%3A00%3A00.000Z&-pageContext=eJydTk8LgjAc_S6_8wYia6LgIexQhFHdOslvc5qwZrotAvG7tVyRXH4%3D&-pageDirection=NEXT"
+        }
+    ],
+    "entry": [
+        {
+            "fullUrl": "https://fhir-ehr.mockcerner.com/r4/b748fd97-7e18-4e5e-80bc-257c0270573f/Observation/L-44678633899",
+            "resource": {
+                "resourceType": "Observation",
+                "id": "L-44678633899",
+                "meta": {
+                    "versionId": "2",
+                    "lastUpdated": "2024-01-05T15:34:54.000Z"
+                },
+                "text": {
+                    "status": "generated",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Observation</b></p><p><b>Patient Id</b>: 123456</p><p><b>Status</b>: Final</p><p><b>Code</b>: T Axis</p><p><b>Result</b>: 43 Degrees</p><p><b>Effective Date</b>: Jan  5, 2024  1:08 A.M. UTC</p></div>"
+                },
+                "identifier": [
+                    {
+                        "system": "https://fhir.cerner.com/ceuuid",
+                        "value": "CE3ad4467d-90f6-4869-8e1c-b3bb99f45a68-44678633899-2024010511314000"
+                    }
+                ],
+                "basedOn": [
+                    {
+                        "reference": "ServiceRequest/25876290777"
+                    }
+                ],
+                "status": "final",
+                "category": [
+                    {
+                        "extension": [
+                            {
+                                "valueCode": "unknown",
+                                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "https://fhir.cerner.com/b748fd97-7e18-4e5e-80bc-257c0270573f/codeSet/72",
+                            "code": "874010",
+                            "display": "T Axis",
+                            "userSelected": true
+                        }
+                    ],
+                    "text": "T Axis"
+                },
+                "subject": {
+                    "reference": "Patient/123456"
+                },
+                "encounter": {
+                    "reference": "Encounter/613002547"
+                },
+                "effectiveDateTime": "2024-01-05T01:08:00.000Z",
+                "issued": "2024-01-05T01:08:00.000Z",
+                "valueQuantity": {
+                    "value": 43,
+                    "unit": "Degrees",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "deg"
+                }
+            },
+            "search": {
+                "mode": "match"
+            }
+        },
+        {
+            "fullUrl": "https://fhir-ehr.mockcerner.com/r4/b748fd97-7e18-4e5e-80bc-257c0270573f/Observation/L-44678633897",
+            "resource": {
+                "resourceType": "Observation",
+                "id": "L-44678633897",
+                "meta": {
+                    "versionId": "2",
+                    "lastUpdated": "2024-01-05T15:34:54.000Z"
+                },
+                "text": {
+                    "status": "generated",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Observation</b></p><p><b>Patient Id</b>: 123456</p><p><b>Status</b>: Final</p><p><b>Code</b>: R Axis</p><p><b>Result</b>: 57 Degrees</p><p><b>Effective Date</b>: Jan  5, 2024  1:08 A.M. UTC</p></div>"
+                },
+                "identifier": [
+                    {
+                        "system": "https://fhir.cerner.com/ceuuid",
+                        "value": "CE3ad4467d-90f6-4869-8e1c-b3bb99f45a68-44678633897-2024010511314000"
+                    }
+                ],
+                "basedOn": [
+                    {
+                        "reference": "ServiceRequest/25876290777"
+                    }
+                ],
+                "status": "final",
+                "category": [
+                    {
+                        "extension": [
+                            {
+                                "valueCode": "unknown",
+                                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "https://fhir.cerner.com/b748fd97-7e18-4e5e-80bc-257c0270573f/codeSet/72",
+                            "code": "874009",
+                            "display": "R Axis",
+                            "userSelected": true
+                        }
+                    ],
+                    "text": "R Axis"
+                },
+                "subject": {
+                    "reference": "Patient/123456"
+                },
+                "encounter": {
+                    "reference": "Encounter/613002547"
+                },
+                "effectiveDateTime": "2024-01-05T01:08:00.000Z",
+                "issued": "2024-01-05T01:08:00.000Z",
+                "valueQuantity": {
+                    "value": 57,
+                    "unit": "Degrees",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "deg"
+                }
+            },
+            "search": {
+                "mode": "match"
+            }
+        }
+    ]
+}        

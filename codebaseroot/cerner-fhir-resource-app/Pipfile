@@ -1,0 +1,35 @@
+[[source]]
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[[source]]
+url = "https://$MAVEN_REPO_USER:${MAVEN_REPO_PASS}@artifactory.upmc.com/artifactory/api/pypi/dataengineering-pypi/simple"
+verify_ssl = true
+name = "artifactory"
+
+[packages]
+aws-clients = { version = "*", index = "artifactory" }
+de-shared = { version = "*", index = "artifactory" }
+integrations-logging = { version = "*", index = "artifactory" }
+requests = "*"
+pandas = "*"
+
+[dev-packages]
+boto3 = "*"
+assertpy = "*"
+boto3-stubs-lite = { extras = ["essential"], version = "*" }
+mypy = "*"
+pytest = "*"
+pytest-cov = "*"
+pyflakes = "*"
+pylint = "*"
+bandit = "*"
+pycodestyle = "*"
+sbom-utility = {version = "*", index = "artifactory"}
+moto = "==5.0.6"
+types-requests = "*"
+types-pytz = "*"
+responses = "*"
+aws-lambda-powertools = "*"
+aws-xray-sdk = "*"

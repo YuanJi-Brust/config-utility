@@ -1,0 +1,25 @@
+stages:
+  - test
+  - pages
+  - analysis
+  - package
+  - deploy
+
+include:
+  - project: "DataEngineering/de-tools/gitlab-includes-files"
+    file: "python/components/test_pipfile_sbom.yaml"
+  - project: "DataEngineering/de-tools/gitlab-includes-files"
+    file: "python/components/sbom_pages.yaml"
+  - project: "DataEngineering/de-tools/gitlab-includes-files"
+    file: "python/components/sca_pipfile.yaml"
+  - project: "DataEngineering/de-tools/gitlab-includes-files"
+    file: "python/components/deploy_lambda_zip_file.yaml"
+
+stg-package:
+  only:
+
+test:
+  image: python:$PYTHON_IMAGE_VERSION
+
+code_analysis:
+  image: python:$PYTHON_IMAGE_VERSION
