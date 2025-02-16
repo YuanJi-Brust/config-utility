@@ -1,0 +1,20 @@
+Install the following:
+git:
+	https://gitforwindows.org/
+	download button
+	run the exe take all default
+	open command
+	
+	set up your username and email
+	>git config --global user.name <your username>
+	>git config --global user.email <your email>
+
+	Use Credential Manager
+	>git config --global crednetial.helper manager
+
+Test
+
+	
+
+
+
